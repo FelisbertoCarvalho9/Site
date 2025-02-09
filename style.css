@@ -239,7 +239,6 @@ footer {
 
     nav {
         margin-top: 10px;
-        flex-direction: column;
         gap: 5px;
     }
 
@@ -319,28 +318,24 @@ footer {
         margin: 10px 0;
     }
 }
-
 @media (max-width: 768px) {
     nav {
         display: flex;
-        flex-wrap: wrap;
-        justify-content: center; /* Mantém os itens centralizados */
-        margin-top: 10px;
+        justify-content: space-evenly; /* Distribui os itens igualmente, mas ainda lado a lado */
+        align-items: center; /* Alinha os itens no centro verticalmente */
+        gap: 10px; /* Espaço entre os links */
+        width: 100%; /* Garantir que ocupe toda a largura */
     }
 
     nav a {
-        margin: 5px; /* Espaçamento entre os itens */
-        padding: 8px 12px;
+        padding: 10px 15px;
         font-size: 1em;
-        white-space: nowrap; /* Evita que os itens quebrem */
+        white-space: nowrap; /* Impede que o texto quebre para a linha seguinte */
     }
 }
 
-/* Estilo para telas menores */
-@media (max-width: 768px) {
-    nav {
-        flex-wrap: wrap; /* Permite que os itens quebrem linha se necessário */
-        justify-content: center; /* Mantém o menu centralizado */
-        gap: 15px; /* Reduz o espaçamento em telas pequenas */
-    }
-}
+
+
+
+
+
