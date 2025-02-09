@@ -62,27 +62,28 @@ body > header h1 a:hover {
 }
 
 nav {
-    display: flex;
-    align-items: center;
-    margin-left: auto;
-    margin-right: 30px;
+    display: flex; /* Garante que os itens fiquem lado a lado */
+    flex-direction: row; /* Organiza os itens horizontalmente */
+    align-items: center; /* Centraliza os itens verticalmente */
+    justify-content: center; /* Centraliza o menu no espaço disponível */
+    gap: 20px; /* Espaçamento entre os links */
+    margin: 0 auto; /* Centraliza o menu horizontalmente */
+    padding: 10px; /* Adiciona um pequeno espaço interno */
 }
 
 nav a {
-    color: var(--blue);
-    padding: 10px 15px;
-    font-size: 1.1em;
-    text-decoration: none;
-    font-weight: bold;
-    border-radius: 5px;
-    margin-left: 6px;
-    transition: background-color 0.3s ease;
-    white-space: nowrap; 
+    color: var(--blue); /* Cor do texto */
+    padding: 10px 15px; /* Espaçamento interno de cada link */
+    font-size: 1.1em; /* Tamanho da fonte */
+    text-decoration: none; /* Remove o sublinhado */
+    font-weight: bold; /* Negrito no texto */
+    border-radius: 5px; /* Borda arredondada */
+    transition: background-color 0.3s ease; /* Suaviza o efeito de hover */
 }
 
 nav a:hover {
-    background-color: var(--darkblue);
-    color: var(--white);
+    background-color: var(--darkblue); /* Cor de fundo ao passar o mouse */
+    color: var(--white); /* Cor do texto ao passar o mouse */
 }
 
 
@@ -226,27 +227,120 @@ footer {
     body > header {
         flex-direction: column;
         align-items: center;
+        text-align: center;
+        padding: 15px;
+    }
+
+    .header-left {
+        margin-left: 0;
+        flex-direction: column;
+        gap: 5px;
     }
 
     nav {
         margin-top: 10px;
+        flex-direction: column;
+        gap: 5px;
     }
 
     nav a {
-        margin-left: 5px;
-        padding: 8px 10px; 
+        display: block;
+        width: 100%;
+        text-align: center;
+    }
+
+    .container {
+        margin-left: 10px;
+        margin-right: 10px;
+        text-align: center;
+    }
+
+    .product-gallery {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .product-item {
+        width: 90%;
+        max-width: 250px;
+    }
+
+    .sobre-mim {
+        flex-direction: column;
+        text-align: center;
+        max-width: 100%;
+    }
+
+    .sobre-mim img {
+        margin-left: 0;
+        width: 80%;
+        max-width: 300px;
+    }
+
+    .sobre-texto {
+        margin-left: 0;
+        padding: 10px;
+    }
+
+    .video-container iframe {
+        height: 250px;
+    }
+
+    .contact-info {
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        font-size: 14px;
+    }
+
+    .logo {
+        height: 40px;
+    }
+
+    body > header h1 {
+        font-size: 2em;
+    }
+
+    nav a {
+        font-size: 1em;
+        padding: 8px;
+    }
+
+    .video-container iframe {
+        height: 200px;
+    }
+
+    .product-item {
+        width: 100%;
+        margin: 10px 0;
     }
 }
 
 @media (max-width: 768px) {
-    .sobre-mim {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
+    nav {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center; /* Mantém os itens centralizados */
+        margin-top: 10px;
     }
 
-    .sobre-texto {
-        max-width: 100%;
-        margin-left: 0; 
+    nav a {
+        margin: 5px; /* Espaçamento entre os itens */
+        padding: 8px 12px;
+        font-size: 1em;
+        white-space: nowrap; /* Evita que os itens quebrem */
+    }
+}
+
+/* Estilo para telas menores */
+@media (max-width: 768px) {
+    nav {
+        flex-wrap: wrap; /* Permite que os itens quebrem linha se necessário */
+        justify-content: center; /* Mantém o menu centralizado */
+        gap: 15px; /* Reduz o espaçamento em telas pequenas */
     }
 }
