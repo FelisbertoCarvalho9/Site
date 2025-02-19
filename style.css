@@ -321,16 +321,35 @@ footer {
 @media (max-width: 768px) {
     nav {
         display: flex;
-        justify-content: space-evenly; /* Distribui os itens igualmente, mas ainda lado a lado */
-        align-items: center; /* Alinha os itens no centro verticalmente */
+        justify-content: center; /* Centraliza horizontalmente */
+        align-items: center; /* Mantém alinhado */
         gap: 10px; /* Espaço entre os links */
-        width: 100%; /* Garantir que ocupe toda a largura */
+        max-width: 100%;
+        overflow-x: auto; /* Permite rolagem horizontal caso necessário */
+        white-space: nowrap; /* Evita que os itens quebrem linha */
+        padding: 10px;
     }
 
     nav a {
-        padding: 10px 15px;
+        padding: 10px 12px;
         font-size: 1em;
-        white-space: nowrap; /* Impede que o texto quebre para a linha seguinte */
+        white-space: nowrap;
+    }
+}
+
+@media (max-width: 480px) {
+    nav {
+        display: flex;
+        justify-content: center; /* Centraliza sempre */
+        overflow-x: auto; /* Adiciona rolagem horizontal se necessário */
+        padding: 10px;
+        gap: 8px;
+        white-space: nowrap;
+    }
+
+    nav a {
+        font-size: 0.9em;
+        padding: 8px 10px;
     }
 }
 
