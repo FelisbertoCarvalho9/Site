@@ -783,6 +783,41 @@ footer p {
     }
 }
 
+/* Contact flex container mobile optimization */
+#contato div[style*="display: flex"] {
+    gap: 20px !important;
+    padding: 0 5px;
+    box-sizing: border-box;
+}
+
+@media (max-width: 768px) {
+    #contato div[style*="display: flex"] {
+        gap: 15px !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        padding: 0;
+    }
+}
+
+@media (max-width: 480px) {
+    #contato div[style*="display: flex"] {
+        gap: 10px !important;
+        padding: 0;
+    }
+    
+    #contato div[style*="text-align: center"] {
+        width: 100% !important;
+        box-sizing: border-box !important;
+        padding: 0 5px !important;
+    }
+}
+
+@media (max-width: 360px) {
+    #contato div[style*="display: flex"] {
+        gap: 8px !important;
+    }
+}
+
 /* Loading Animation */
 @keyframes fadeInUp {
     from {
