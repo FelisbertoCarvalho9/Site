@@ -182,6 +182,15 @@ nav a.active {
     box-sizing: border-box;
 }
 
+/* Specific styles for contact container */
+#contato {
+    padding: 30px 20px;
+    max-width: 95%;
+    width: 95%;
+    margin: 40px auto;
+    box-sizing: border-box;
+}
+
 .container h2 {
     font-size: 2.5em;
     font-weight: 300;
@@ -460,7 +469,7 @@ footer p {
 .contact-info {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 25px;
+    gap: 7px;
     margin-top: 40px;
 }
 
@@ -555,10 +564,15 @@ footer p {
         padding: 6px 12px;
         font-size: 0.8em;
         min-width: auto;
+    }    .container {
+        padding: 40px 20px;
     }
 
-    .container {
-        padding: 40px 20px;
+    #contato {
+        padding: 25px 15px;
+        max-width: 90%;
+        width: 90%;
+        margin: 20px auto;
     }
 
     .container h2 {
@@ -592,11 +606,9 @@ footer p {
     .video-container iframe {
         height: 280px;
         border-radius: var(--border-radius-sm);
-    }
-
-    .contact-info {
+    }    .contact-info {
         grid-template-columns: 1fr;
-        gap: 20px;
+        gap: 12px;
     }
 
     #contato {
@@ -629,10 +641,15 @@ footer p {
         padding: 6px 10px;
         font-size: 0.75em;
         letter-spacing: 0.3px;
+    }    .container {
+        padding: 30px 15px;
     }
 
-    .container {
-        padding: 30px 15px;
+    #contato {
+        padding: 20px 10px;
+        max-width: 85%;
+        width: 85%;
+        margin: 15px auto;
     }
 
     .container h2 {
@@ -715,10 +732,15 @@ footer p {
     nav a {
         padding: 5px 8px;
         font-size: 0.7em;
+    }    .container {
+        padding: 25px 12px;
     }
 
-    .container {
-        padding: 25px 12px;
+    #contato {
+        padding: 15px 8px;
+        max-width: 80%;
+        width: 80%;
+        margin: 10px auto;
     }
 
     .container h2 {
