@@ -78,13 +78,13 @@ body > header::before {
 .header-left {
     display: flex;
     align-items: center;
-    gap: 12px;
+    gap: 6px;
     position: relative;
     z-index: 1;
 }
 
 .logo {
-    height: 100px;
+    height: 120px;
     width: auto;
     filter: drop-shadow(0 4px 8px rgba(0,0,0,0.2));
     transition: var(--transition);
@@ -536,20 +536,21 @@ footer p {
 /* Modern Responsive Design */
 
 /* Tablet Portrait e Mobile Landscape (768px) */
-@media (max-width: 768px) {
-    body > header {
+@media (max-width: 768px) {    body > header {
         flex-direction: column;
         padding: 15px;
         gap: 15px;
     }
 
     .header-left {
-        flex-direction: column;
-        gap: 10px;
+        flex-direction: row;
+        gap: 15px;
+        justify-content: center;
+        align-items: center;
     }
 
     body > header h1 {
-        font-size: 1.8em;
+        font-size: 1.5em;
         text-align: center;
     }
 
@@ -622,26 +623,24 @@ footer p {
     body {
         font-size: 15px;
     }    .logo {
-        height: 45px;
+        height: 80px;
     }
 
     body > header {
         padding: 12px 15px;
-    }
-
-    body > header h1 {
+    }    body > header h1 {
         font-size: 1.5em;
     }
 
     nav {
         gap: 6px;
-    }
-
-    nav a {
+    }    nav a {
         padding: 6px 10px;
         font-size: 0.75em;
         letter-spacing: 0.3px;
-    }    .container {
+    }    .header-left {
+        gap: 1px;
+    }.container {
         padding: 30px 15px;
     }
 
@@ -721,18 +720,16 @@ footer p {
 @media (max-width: 360px) {
     body {
         font-size: 14px;
-    }
-
-    body > header h1 {
+    }    body > header h1 {
         font-size: 1.3em;
-    }    .logo {
-        height: 40px;
-    }
-
-    nav a {
+    }.logo {
+        height: 50px;
+    }    nav a {
         padding: 5px 8px;
         font-size: 0.7em;
-    }    .container {
+    }    .header-left {
+        gap: 0px;
+    }.container {
         padding: 25px 12px;
     }
 
