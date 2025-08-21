@@ -29,7 +29,16 @@
 <section class="container">
     <h2>Os Nossos Produtos</h2>
     <p style="font-size: 1.2em; text-align: center; color: var(--grey); max-width: 800px; margin: 0 auto 40px;">Explore a nossa coleção de bordados artesanais únicos, criados com técnicas tradicionais e designs exclusivos.</p>
-    <div class="product-gallery">
+    
+    <!-- Product Tabs -->
+    <div class="product-tabs">
+        <button class="tab-button active" data-tab="produtos-gerais">Produtos Artesanais</button>
+        <button class="tab-button" data-tab="colecao-nature">Coleção Nature</button>
+    </div>
+    
+    <!-- Tab Content: Produtos Gerais -->
+    <div id="produtos-gerais" class="tab-content active">
+        <div class="product-gallery">
         <div class="product-item" style="--i: 6">
             <img src="/images/toalhaM1.jpeg" alt="Toalha de Mesa Bordada">
             <h3>Toalha de Mesa Bordada</h3>
@@ -75,8 +84,39 @@
             <h3>Centros de Mesa (Runners)</h3>
             <p>Centros de mesa (runners) bordados à mão, que trazem um toque de charme e tradição à sua decoração.</p>
         </div>
-        
+        </div>
     </div>
+    
+    <!-- Tab Content: Coleção Nature -->
+    <div id="colecao-nature" class="tab-content">
+        <div class="nature-collection">
+            <div class="pdf-info">
+                <h3>Coleção Nature - Catálogo Digital</h3>
+                <p>Descubra a nossa exclusiva Coleção Nature, onde a beleza da natureza encontra a arte do bordado tradicional. Esta coleção especial apresenta desenhos inspirados na flora e fauna, criados com técnicas artesanais únicas.</p>
+            </div>
+            
+            <div class="pdf-preview-container">
+                <div class="pdf-viewer">
+                    <iframe 
+                        src="/images/nature_collection.pdf#view=FitH" 
+                        type="application/pdf"
+                        title="Colecção Nature - Visualização do Catálogo">
+                        <p>O seu navegador não suporta visualização de PDF. 
+                        <a href="/images/nature_collection.pdf" target="_blank">Clique aqui para transferir o catálogo</a></p>
+                    </iframe>
+                </div>
+                <div class="pdf-controls">
+                    <a href="/images/nature_collection.pdf" class="pdf-download-btn" download>
+                        <svg class="pdf-icon" viewBox="0 0 24 24">
+                            <path d="M14,2H6A2,2 0 0,0 4,4V20A2,2 0 0,0 6,22H18A2,2 0 0,0 20,20V8L14,2M18,20H6V4H13V9H18V20Z"/>
+                        </svg>
+                        Transferir Catálogo
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
 </section>
 
 <footer>

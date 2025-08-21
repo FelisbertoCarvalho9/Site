@@ -118,5 +118,54 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
     
+    // Product Tabs Functionality
+    function initProductTabs() {
+        const tabButtons = document.querySelectorAll('.tab-button');
+        const tabContents = document.querySelectorAll('.tab-content');
+        
+        function showTab(tabId) {
+            // Hide all tab contents
+            tabContents.forEach(content => {
+                content.classList.remove('active');
+            });
+            
+            // Remove active class from all buttons
+            tabButtons.forEach(button => {
+                button.classList.remove('active');
+            });
+            
+            // Show selected tab content
+            const selectedContent = document.getElementById(tabId);
+            if (selectedContent) {
+                selectedContent.classList.add('active');
+            }
+            
+            // Add active class to clicked button
+            const selectedButton = document.querySelector(`[data-tab="${tabId}"]`);
+            if (selectedButton) {
+                selectedButton.classList.add('active');
+            }
+        }
+        
+        // Add click event to tab buttons
+        tabButtons.forEach(button => {
+            button.addEventListener('click', function() {
+                const tabId = this.getAttribute('data-tab');
+                showTab(tabId);
+            });
+        });
+        
+        // Show first tab by default
+        if (tabButtons.length > 0) {
+            const firstTabId = tabButtons[0].getAttribute('data-tab');
+            showTab(firstTabId);
+        }
+    }
+    
+    // Initialize tabs if on products page
+    if (document.querySelector('.product-tabs')) {
+        initProductTabs();
+    }
+    
     console.log('Casa Real Bordados - Website loaded successfully! 🎨');
 });
