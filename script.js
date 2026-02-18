@@ -2,7 +2,7 @@
 // Casa Real Bordados — Interactive Features
 // ═══════════════════════════════════════════════════════════════
 
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
 
     // ─── Header scroll effect ───
     const header = document.querySelector('body > header');
@@ -80,11 +80,21 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     // ─── Active page highlighting ───
-    const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+    const path = window.location.pathname;
     navLinks.forEach(item => {
         const href = item.getAttribute('href');
-        if (href === currentPage) {
-            item.classList.add('active');
+        // Match folder-based URLs: check if current path contains the folder name
+        if (href === './' || href === '../') {
+            // Home link: active if at root or /index.html
+            if (path === '/' || path.endsWith('/index.html') || path === '') {
+                item.classList.add('active');
+            }
+        } else {
+            // Extract folder name from href (e.g. "produtos/" -> "produtos")
+            const folder = href.replace('../', '').replace('/', '').replace('.html', '');
+            if (folder && path.includes('/' + folder)) {
+                item.classList.add('active');
+            }
         }
     });
 
@@ -113,7 +123,7 @@ document.addEventListener('DOMContentLoaded', function() {
     scrollButton.setAttribute('aria-label', 'Voltar ao topo');
     document.body.appendChild(scrollButton);
 
-    window.addEventListener('scroll', function() {
+    window.addEventListener('scroll', function () {
         if (window.pageYOffset > 400) {
             scrollButton.classList.add('show');
         } else {
@@ -121,7 +131,7 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }, { passive: true });
 
-    scrollButton.addEventListener('click', function() {
+    scrollButton.addEventListener('click', function () {
         window.scrollTo({ top: 0, behavior: 'smooth' });
     });
 
@@ -150,7 +160,7 @@ document.addEventListener('DOMContentLoaded', function() {
         }
 
         tabButtons.forEach(button => {
-            button.addEventListener('click', function() {
+            button.addEventListener('click', function () {
                 showTab(this.getAttribute('data-tab'));
             });
         });
@@ -167,7 +177,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // ─── Link click micro-animations ───
     const interactiveLinks = document.querySelectorAll('a[href^="tel:"], a[href^="mailto:"]');
     interactiveLinks.forEach(link => {
-        link.addEventListener('click', function() {
+        link.addEventListener('click', function () {
             this.style.transform = 'scale(0.95)';
             setTimeout(() => { this.style.transform = ''; }, 200);
         });
