@@ -1,98 +1,184 @@
 <!DOCTYPE html>
 <html lang="pt-PT">
-<head>    <meta charset="UTF-8">
+
+<head>
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Casa Real Bordados</title>
+    <meta name="description"
+        content="Casa Real Bordados — Bordados artesanais exclusivos feitos à mão no Vale do Sousa, Felgueiras. Tradição e arte em cada ponto.">
+    <title>Casa Real Bordados — Bordados Artesanais Exclusivos</title>
     <link rel="icon" href="images/l.jpg" type="image/png">
     <link rel="shortcut icon" href="images/l.jpg" type="image/png">
     <link rel="apple-touch-icon" href="images/l.jpg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="style.css">
     <script src="script.js" defer></script>
 </head>
+
 <body>
 
-<header>
-    <div class="header-left">
-        <img src="/images/logo.png" alt="Logotipo" class="logo">
-        <h1>Casa Real Bordados</h1>
+    <header>
+        <div class="header-left">
+            <img src="images/logo.png" alt="Casa Real Bordados — Logotipo" class="logo">
+            <h1>Casa Real Bordados</h1>
+        </div>
+        <button class="hamburger" aria-label="Menu" aria-expanded="false">
+            <span></span><span></span><span></span>
+        </button>
+        <nav>
+            <a href="index.html" class="active">Home</a>
+            <a href="produtos.html">Produtos</a>
+            <a href="sobre.html">Sobre Nós</a>
+            <a href="contacto.html">Contactos</a>
+        </nav>
+        <div class="nav-overlay"></div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-deco hero-deco-1"></div>
+        <div class="hero-deco hero-deco-2"></div>
+        <div class="hero-content">
+            <h2>A Arte do Bordado<br>Feito à Mão</h2>
+            <p>Descubra a nossa coleção de bordados exclusivos, criados com dedicação e tradição no coração do Vale do
+                Sousa.</p>
+            <a href="produtos.html" class="hero-btn">Explorar Coleção →</a>
+        </div>
+    </section>
+
+    <!-- Video Section -->
+    <section class="container reveal">
+        <h2>A Nossa História</h2>
+        <div class="video-container">
+            <iframe width="100%" height="450" src="https://www.youtube.com/embed/Bxoo7Wt0AU0" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe>
+        </div>
+    </section>
+
+    <!-- Section Divider -->
+    <div class="section-divider">
+        <span></span>
+        <svg viewBox="0 0 24 24">
+            <path d="M12 2L9.19 8.63 2 9.24l5.46 4.73L5.82 21 12 17.27 18.18 21l-1.64-7.03L22 9.24l-7.19-.61z" />
+        </svg>
+        <span></span>
     </div>
-    <nav>
-        <a href="index.html">Home</a>
-        <a href="produtos.html">Produtos</a>
-        <a href="sobre.html">Sobre Nós</a>
-        <a href="contacto.html">Contactos</a>
-    </nav>
-</header>
 
+    <!-- Featured Products -->
+    <section class="container reveal">
+        <h2>Destaques</h2>
+        <div class="product-gallery reveal-stagger">
+            <div class="product-item">
+                <div class="product-img-wrap">
+                    <img src="images/colares.jpeg" alt="Colares Bordados à mão">
+                </div>
+                <div class="product-item-body">
+                    <h3>Colares Bordados à Mão</h3>
+                    <p>Feitos à mão com linho de alta qualidade e desenhos cuidadosamente elaborados, estes colares são
+                        leves, confortáveis e cheios de charme!</p>
+                </div>
+            </div>
+            <div class="product-item">
+                <div class="product-img-wrap">
+                    <img src="images/bastidores.jpeg" alt="Bastidores Bordados">
+                </div>
+                <div class="product-item-body">
+                    <h3>Bastidores Bordados à Mão</h3>
+                    <p>Perfeitos para decoração de interiores, lembranças especiais ou presentes cheios de significado.
+                    </p>
+                </div>
+            </div>
+            <div class="product-item">
+                <div class="product-img-wrap">
+                    <img src="images/toalhaB.jpeg" alt="Toalha de Batismo">
+                </div>
+                <div class="product-item-body">
+                    <h3>Toalha de Batismo</h3>
+                    <p>Toalha de Batismo delicadamente bordada à mão, feita com amor para um momento único e especial.
+                    </p>
+                </div>
+            </div>
+            <div class="product-item">
+                <div class="product-img-wrap">
+                    <img src="images/b4.JPG" alt="Bordado 4 Estações">
+                </div>
+                <div class="product-item-body">
+                    <h3>Bordado 4 Estações</h3>
+                    <p>Painel bordado à mão com o tema "Quatro Estações". Uma obra de arte que representa a beleza
+                        natural ao longo do ano.</p>
+                </div>
+            </div>
+            <div class="product-item">
+                <div class="product-img-wrap">
+                    <img src="images/sacos.jpeg" alt="Sacos Bordados">
+                </div>
+                <div class="product-item-body">
+                    <h3>Sacos Bordados</h3>
+                    <p>Feitos com amor e bordados com dedicação, perfeitos para levar o essencial com estilo!</p>
+                </div>
+            </div>
+            <div class="product-item">
+                <div class="product-img-wrap">
+                    <img src="images/runners.jpeg" alt="Centros de Mesa">
+                </div>
+                <div class="product-item-body">
+                    <h3>Centros de Mesa (Runners)</h3>
+                    <p>Centros de mesa bordados à mão, que trazem um toque de charme e tradição à sua decoração.</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-
-<section class="container" id="home">
-    <h2>Bem-vindos à Casa Real Bordados</h2>
-    <p style="font-size: 1.2em; text-align: center; color: var(--grey); max-width: 800px; margin: 0 auto 40px;">Descubra a nossa coleção de bordados exclusivos feitos com dedicação e tradição no coração do Vale do Sousa.</p>
-    <div class="video-container">
-        <iframe width="100%" height="450" src="https://www.youtube.com/embed/Bxoo7Wt0AU0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <!-- Section Divider -->
+    <div class="section-divider">
+        <span></span>
+        <svg viewBox="0 0 24 24">
+            <path d="M12 2L9.19 8.63 2 9.24l5.46 4.73L5.82 21 12 17.27 18.18 21l-1.64-7.03L22 9.24l-7.19-.61z" />
+        </svg>
+        <span></span>
     </div>
-</section>
 
-<section class="container">
-    <h2>Destaques/Novidades</h2>
-    <div class="product-gallery">
-        <div class="product-item">
-            <img src="/images/colares.jpeg" alt="Colares Bordados">
-            <h3>Colares Bordados à mão</h3>
-            <p>Feitos à mão com linho de alta qualidade e desenhos cuidadosamente elaborados, estes colares são leves, confortáveis e cheios de charme!</p>
+    <!-- Contact CTA -->
+    <section class="container reveal" id="contato">
+        <h2>Entre em Contacto</h2>
+        <p>Estamos disponíveis para esclarecer qualquer dúvida e ajudar com os seus projetos de bordado.</p>
+        <div class="contact-inline">
+            <div class="contact-inline-item">
+                <p class="label">📞 <strong>Contacto direto:</strong></p>
+                <p class="value"><a href="tel:+351914118063">(+351) 914 118 063</a></p>
+            </div>
+            <div class="contact-inline-item">
+                <p class="label">✉️ <strong>Email:</strong></p>
+                <p class="value"><a href="mailto:casarealbordados@gmail.com">casarealbordados@gmail.com</a></p>
+            </div>
         </div>
-        <div class="product-item">
-            <img src="/images/bastidores.jpeg" alt="Bastidores Bordados">
-            <h3>Bastidores Bordados à mão</h3>
-            <p>Perfeitos para decoração de interiores, lembranças especiais ou presentes cheios de significado, os nossos bastidores podem incluir flores, frases inspiradoras, nomes personalizados ou desenhos temáticos.</p>
-        </div>
-        <div class="product-item">
-            <img src="/images/toalhaB.jpeg" alt="Toalha de Batismo">
-            <h3>Toalha de Batismo</h3>
-            <p>Toalha de Batismo delicadamente bordada à mão, feita com amor para um momento único e especial.</p>
-        </div>
-        <div class="product-item" style="--i: 0">
-            <img src="/images/b4.JPG" alt="Bordado 4 estações">
-            <h3>Bordado 4 Estações</h3>
-            <p>Painel bordado à mão com o tema "Quatro Estações". Uma obra de arte que representa a beleza natural ao longo do ano.</p>
-        </div>
-        <div class="product-item" style="--i: 1">
-            <img src="/images/sacos.jpeg" alt="Sacos Bordados">
-            <h3>Sacos Bordados</h3>
-            <p>Feitos com amor e bordados com dedicação, perfeitos para levar o essencial com estilo!</p>
-        </div>
-        <div class="product-item" style="--i: 2">
-            <img src="/images/runners.jpeg" alt="Centros de Mesa">
-            <h3>Centros de Mesa (Runners)</h3>
-            <p>Centros de mesa (runners) bordados à mão, que trazem um toque de charme e tradição à sua decoração.</p>
-        </div>
-    </div>
-</section>
+    </section>
 
-<section class="container" id="contato">
-    <h2>Entre em Contacto</h2>
-    <p style="font-size: 1.1em; margin-bottom: 30px;">Estamos disponíveis para esclarecer qualquer dúvida e ajudar com os seus projetos de bordado.</p>
-    <div style="display: flex; gap: 40px; justify-content: center; align-items: center; flex-wrap: wrap;">
-        <div style="text-align: center;">
-            <p style="margin: 0; font-size: 1.1em; color: var(--grey);">📞 <strong>Contacto direto:</strong></p>
-            <p style="margin: 5px 0 0; font-size: 1.3em; font-weight: 600; color: var(--blue);">
-                <a href="tel:+351914118063" style="color: var(--blue); text-decoration: none;">(+351) 914 118 063</a>
-            </p>
+    <footer>
+        <div class="footer-content">
+            <p class="footer-brand">Casa Real Bordados</p>
+            <p>&copy; 2026 Casa Real Bordados. Todos os direitos reservados.</p>
+            <div class="footer-socials">
+                <a href="https://www.facebook.com/p/Casa-Real-Bordados-100067909465045/" target="_blank"
+                    aria-label="Facebook">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z" />
+                    </svg>
+                </a>
+                <a href="https://www.instagram.com/casa_real_bordados_atelier" target="_blank" aria-label="Instagram">
+                    <svg viewBox="0 0 24 24">
+                        <rect x="2" y="2" width="20" height="20" rx="5" ry="5" fill="none" stroke="currentColor"
+                            stroke-width="2" />
+                        <circle cx="12" cy="12" r="5" fill="none" stroke="currentColor" stroke-width="2" />
+                        <circle cx="17.5" cy="6.5" r="1.5" fill="currentColor" />
+                    </svg>
+                </a>
+            </div>
         </div>
-        <div style="text-align: center;">
-            <p style="margin: 0; font-size: 1.1em; color: var(--grey);">✉️ <strong>Email:</strong></p>
-            <p style="margin: 5px 0 0; font-size: 1.1em; font-weight: 600; color: var(--blue);">
-                <a href="mailto:casarealbordados@gmail.com" style="color: var(--blue); text-decoration: none;">casarealbordados@gmail.com</a>
-            </p>
-        </div>
-    </div>
-</section>
-
-<footer>
-    
-    <p>&copy; 2025 Casa Real Bordados. Todos os direitos reservados.</p>
-</footer>
+    </footer>
 
 </body>
+
 </html>
